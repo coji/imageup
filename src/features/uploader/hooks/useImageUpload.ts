@@ -1,4 +1,5 @@
 import ky from 'ky'
+import { useQueryClient } from '@tanstack/react-query'
 
 interface GetUploadUrlResult {
   result: {
@@ -12,6 +13,8 @@ interface GetUploadUrlResult {
 }
 
 export const useImageUpload = () => {
+  const queryClient = useQueryClient()
+
   const upload = async (files: File[]) => {
     for (const file of files) {
       // アップロードURLの取得
@@ -32,6 +35,8 @@ export const useImageUpload = () => {
       formData.append(`file`, file)
       const cloudflareResponse = await ky.post(uploadURL, { body: formData })
       console.log(await cloudflareResponse.json())
+
+      queryClient.invalidateQueries(['gallery'])
     }
 
     /*
