@@ -1,0 +1,40 @@
+{
+  "name": "imageup",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.2.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@tanstack/react-query": "^4.0.10",
+    "@tanstack/react-query-devtools": "^4.0.10",
+    "form-data": "^4.0.0",
+    "formdata-node": "^4.3.3",
+    "framer-motion": "^6",
+    "got": "^12.3.0",
+    "ky": "^0.31.1",
+    "node-fetch": "^3.2.10",
+    "node-fetch-commonjs": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.34.0",
+    "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vercel/node": "^2.5.3",
+    "@vitejs/plugin-react": "^2.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vite-plugin-ssr": "^0.4.17",
+    "vite-tsconfig-paths": "^3.5.0"
+  }
+}
